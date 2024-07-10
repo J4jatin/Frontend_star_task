@@ -1,0 +1,399 @@
+<div class="container mx-20 relative sticky top-0 z-20">
+  <div class="header mx-40 ">
+    <div class="navbar h-20 flex items-center">
+      <div class="logo mr-20 text-4xl font-semibold font-[bold]">intract.</div>
+      <div class="navi-items mr-7 w-[500px] flex justify-between">
+        <a href="#" class="hover:text-white ">Compass</a>
+        <a href="#" class="hover:text-white">Explore</a>
+        <a href="#" class="hover:text-white">Academy</a>
+        <a href="#" class="hover:text-white">NFTS</a>
+        <a href="#" class="hover:text-white">For Projects</a>
+      </div>
+      <div class="action-items w-[700px] flex items-center">
+        <div class="search-bar w-full">
+          <input type="text" class=" placeholder:italic pl-16 px-2 py-3 w-11/12 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-zinc-900" placeholder="Serach for ecosystem, trending quests etc..">
+          <img src="../assets/search_24dp_999999_FILL0_wght400_GRAD0_opsz24.svg" alt="Search" class="absolute bottom-7 mx-5 ">
+        
+        </div>
+        <div class="action-btn  flex items-center justify-center">
+          <img src="../assets/broadcast_or-04af786c.svg" class="h-10 w-10 outline outline-offset-5 outline-yello-500  rounded-full" alt="broadcast">
+          <button class="px-10 ml-4 py-2 rounded-lg text-black bg-white">Signin</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="background-intro-section relative">
+  <img src="../assets/background.png" class="w-screen" alt="image goes here">
+  <div class="centered-text-content absolute inset-0 flex flex-col items-center justify-center mt-[-100px] ml-[-100px]">
+    <div class="title1 mb-20">
+        <p class="text-xl pl-3">Intract</p>
+        <h1 class="text-6xl font-semibold">Academy</h1>
+    </div>
+    <div class="title2 mb-20">
+        <span class="tracking-widest text-xl"> intract users <span class="text-slate-500">have together made more than </span>$100 million in web3.
+          <br>
+        </span>
+        <span class="tracking-widest text-xl pl-40"><span class="text-slate-500">join then and</span> learn how to earn crypto</span>
+    </div>
+    <div class="call-toAction-Btn">
+      <button class="px-20 py-3 rounded-lg text-slate-300 bg-purple-800">Get started</button>
+    </div>
+  </div>
+</div>
+<!-- part 1 -->
+
+ <div class="main-section grid grid-cols-8 grid-rows-7 h-lvh mt-10"> 
+  <div class="bg-[#151515] rounded-3xl p-4 w-full mx-auto row-start-1 row-end-3 col-start-2 col-end-5">
+    <!-- Main card (always visible) -->
+    <div class="relative w-full h-full ">
+      <div class="flex items-center  h-full ">
+        <div class="p-2 mr-2 relative">
+          <img src="../assets/2d1ac16ea7c9416d94a74f2ba2fe8d4a.png" alt="Crypto icon" class="object-cover w-40 h-40 rounded-lg outline outline-offset-4  outline-zinc-700 ">
+          <p class="text-slate-300 text-center absolute bottom-5 left-10 bg-slate-900/100 px-4 py-2 rounded-full">6 Quests</p>
+        </div>
+        <div class="felx self-start mt-10">
+          <h2 class="text-white text-xl font-bold">Basics of Crypto</h2>
+          <p class="text-gray-400 mr-7">The safest and easiest place to start your crypto journey!</p>
+          <div class="mt-10">
+            <span class="bg-yellow-500 text-black px-2 py-1 rounded">1490 XPs</span>
+          </div>
+        </div>
+      </div>
+      <!-- Expansion panel toggle -->
+      <button (click)="togglePanel()" class="absolute top-0 right-0 text-white ">
+        <svg [class.rotate-180]="isPanelExpanded" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Expansion panel content -->
+    <div *ngIf="isPanelExpanded" class="mt-4 space-y-2 h-96 w-full mt-5 p-5 overflow-scroll overflow-x-hidden relative z-50">
+      <div *ngFor="let quest of quests" class="bg-[#151515] rounded-lg p-3 flex items-center h-32">
+        <div class="flex items-center h-80">
+          <img [src]="quest.image" alt="Quest icon" class="w-30 h-20 mr-3 rounded-lg object-cover">
+        </div>
+        <div class="flex-row items-center ml-5">
+          <div class="mb-10">
+            <span class="text-white font-normal text-2xl tracking-noraml">{{quest.title}}</span>
+          </div>
+          <div>
+            <span class="text-gray-400 mr-2">{{quest.tasks}} Tasks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main1-section grid col-start-7 col-end-9 row-start-3 row-end-5">
+    <div class="container-main1 flex-col">
+      <div> 
+        <img class="block mx-8 p-5 bg-zinc-600 rounded-full" src="../assets/check_24dp_999999_FILL0_wght400_GRAD0_opsz24.svg" alt="checkmarkgoes">
+      </div>
+      <div class="w-full mt-8">
+        <img class="w-40 rounded-3xl my-3" src="../assets/1b1912563b964393b0478949efad5ed3.png" alt="cat">
+      </div>
+      <div>
+        <span class="text-2xl mt-8">Intract Certified: Learner NFT</span>
+      </div>
+      <div> 
+        <span class="text-slate-500 mt-8">your crypto black-belt <br> <span class="text-slate-500">certificate</span></span>
+      </div>
+      <div>
+        <button class="py-2 px-20 bg-zinc-900 rounded-xl mt-8">Claim</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- part 2 -->
+
+<div class="main-section  grid grid-cols-8 grid-rows-7 h-lvh mt-10"> 
+  <div class="bg-[#151515] rounded-3xl p-4 w-full mx-auto row-start-1 row-end-3 col-start-4 col-end-7">
+    <!-- Main card (always visible) -->
+    <div class="relative w-full h-full ">
+      <div class="flex items-center  h-full ">
+        <div class="p-2 mr-2 relative">
+          <img src="../assets/2d1ac16ea7c9416d94a74f2ba2fe8d4a.png" alt="Crypto icon" class="object-cover w-40 h-40 rounded-lg">
+          <p class="text-slate-300 text-center absolute bottom-5 left-10 bg-slate-900/100 px-4 py-2 rounded-full">6 Quests</p>
+        </div>
+        <div class="felx self-start mt-10">
+          <h2 class="text-white text-xl font-bold">Basics of Crypto</h2>
+          <p class="text-gray-400 mr-7">The safest and easiest place to start your crypto journey!</p>
+          <div class="mt-10">
+            <span class="bg-yellow-500 text-black px-2 py-1 rounded">1490 XPs</span>
+          </div>
+        </div>
+      </div>
+      <!-- Expansion panel toggle -->
+      <button (click)="togglePanel()" class="absolute top-0 right-0 text-white">
+        <svg [class.rotate-180]="isPanelExpanded" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Expansion panel content -->
+    <div *ngIf="isPanelExpanded" class="mt-4 space-y-2 h-96 w-full mt-5 p-5 overflow-scroll overflow-x-hidden">
+      <div *ngFor="let quest of quests" class="bg-[#151515] rounded-lg p-3 flex items-center h-32">
+        <div class="flex items-center h-80">
+          <img [src]="quest.image" alt="Quest icon" class="w-30 h-20 mr-3 rounded-lg object-cover">
+        </div>
+        <div class="flex-row items-center ml-5">
+          <div class="mb-10">
+            <span class="text-white font-normal text-2xl tracking-noraml">{{quest.title}}</span>
+          </div>
+          <div>
+            <span class="text-gray-400 mr-2">{{quest.tasks}} Tasks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main1-section grid col-start-2 col-end-4 row-start-4 row-end-6">
+    <div class="container-main1 flex-col">
+      <div> 
+        <img class="block mx-8 p-5 bg-zinc-600 rounded-full" src="../assets/check_24dp_999999_FILL0_wght400_GRAD0_opsz24.svg" alt="checkmarkgoes">
+      </div>
+      <div class="w-full mt-8">
+        <img class="w-40 rounded-3xl my-3" src="../assets/1b1912563b964393b0478949efad5ed3.png" alt="cat">
+      </div>
+      <div>
+        <span class="text-2xl mt-8">Intract Certified: Learner NFT</span>
+      </div>
+      <div> 
+        <span class="text-slate-500 mt-8">your crypto black-belt <br> <span class="text-slate-500">certificate</span></span>
+      </div>
+      <div>
+        <button class="py-2 px-20 bg-zinc-900 rounded-xl mt-8">Claim</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- part 3  -->
+
+<div class="main-section  grid grid-cols-8 grid-rows-7 h-lvh mt-10"> 
+  <div class="flex flex-col space-y-4 bg-[#151515] p-4 rounded-lg max-w-sm grid col-start-3 col-end-5 row-start-1 row-end-6">
+    <!-- Timer Card -->
+    <div class="bg-[#191919] rounded-lg p-4 ">
+      <p class="text-gray-400 text-sm mb-2">Reward unlocks in</p>
+      <div class="grid grid-cols-4 gap-2 text-center">
+        <div>
+          <p class="text-4xl font-bold text-gray-200">{{timeLeft.days}}</p>
+          <p class="text-xs text-gray-400">Days</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-gray-200">{{timeLeft.hours}}</p>
+          <p class="text-xs text-gray-400">Hrs</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-gray-200">{{timeLeft.minutes}}</p>
+          <p class="text-xs text-gray-400">Mins</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-gray-200">{{timeLeft.seconds}}</p>
+          <p class="text-xs text-gray-400">Sec</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Lucky Draw Card -->
+    <div class="bg-[#191919] rounded-lg p-4">
+      <div class="relative">
+        <img src="../assets/kol-reward-12e6ae06.gif" alt="Lucky Draw" class="w-full rounded-lg">
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <p class="text-white text-lg font-bold mb-4">Lucky Draw</p>
+          
+        </div>
+      </div>
+      <div class="mt-4">
+        <p class="text-gray-400 text-sm">Exclusive Community</p>
+        <div class="flex items-center mt-2">
+          <img src="path-to-earndrop-logo.png" alt="Earndrop" class="w-6 h-6 mr-2">
+          <p class="text-gray-200">Earndrop</p>
+        </div>
+        <div class="mt-2">
+          <p class="text-gray-400 text-sm flex items-center">
+            <span class="mr-2">✓</span> Complete all Essential quests
+          </p>
+          <p class="text-gray-400 text-sm flex items-center">
+            <span class="mr-2">✓</span> Complete at least 1 Alpha Hub quest today
+          </p>
+        </div>
+      <button class="w-full bg-[#151515] text-gray-200 py-2 rounded-lg mt-4 hover:bg-gray-600 transition duration-300">
+          Claim Now →
+        </button>
+      </div>
+    </div>
+  </div>
+  <img src="/assets/reward-info-path-571d6141.svg" alt="" class="_final_reward_info_path_x6x4j_111">
+  <div class="bg-[#151515] rounded-lg shadow-md overflow-hidden grid col-start-6 col-end-8  row-start-2 row-end-5  mt-10">
+    <div class="px-6 py-4 flex ">
+      <div class="mr-2 font-bold text-xl text-slate-500 border-b border-gray-700">Reward info </div>
+      <div> <img src="../assets/info_24dp_999999_FILL0_wght400_GRAD0_opsz24.svg" alt="info"></div>
+    </div>
+    <div class="px-6 py-4 ">
+      <p class="mt-2 text-xl text-slate-300 border-b border-gray-700 pb-6 text-wrap">
+        Free access to paid KOL (crypto earning) communities!
+      </p>
+    </div>
+      
+    <div class="px-6 ">
+      <p class="text-sm text-slate-500">
+        Win access to exclusive earning communities of some of the the greatest earners in crypto for a month, every 24 hours. Get access to unmatched insights, a close-knit community of the best airdrop earners, and more.
+      </p>
+    </div>
+    <div class="px-6 py-4 ">
+      <p class="text-base text-slate-500">
+        To win: make sure you've connected your Twitter and Discord accounts - and follow our criteria!
+      </p>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<div class="mx-60">
+  <div class="flex flex-col justify-center items-center">
+    <div>
+      <span class="text-2xl tracking-wides">Top Crypto Creators and Projects to Follow</span>
+    </div>
+    <div class="mt-4">
+      <span>Answers to your crypto doubts, straight from the experts</span>
+    </div>
+  </div>
+  <div class="flex gap-6 mt-10">
+    <div *ngFor="let sanitizedVideoUrl of sanitizedVideoUrls; let i = index" class="relative w-full">
+      <div class="w-full h-[500px] relative">
+        <div *ngIf="!isPlaying[i]" class="w-full h-full">
+          <img 
+            src="../assets/cryptopunk_monkey_is_going_bananas_by_samitdigitalart_dgwv6ec-fullview.jpg" 
+            alt="Video Thumbnail" 
+            class="w-full h-full object-cover rounded-3xl"
+          />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
+            <button (click)="playVideo(i)" class="text-white text-4xl">
+              ▶️
+            </button>
+          </div>
+        </div>
+        <iframe 
+          *ngIf="isPlaying[i]" 
+          class="w-full h-full" 
+          [src]="sanitizedVideoUrl" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="absolute bottom-10">
+        <p class="p-2 text-xl whitespace-normal">how to plan for your retirement with crypto</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex flex-col justify-center items-center w-full h-full mb-10 mt-10">
+  <div>
+    <div class="flex justify-center items-center">
+      <span class="text-3xl tracking-wides mb-5">Crypto Dictionary</span>
+    </div>
+    <div>
+      <span class="text-lg">Your one-stop to catch up on all crypto terms</span>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div>
+        <img class="w-full h-full object-cover rounded-3xl mt-10" src="../assets/2e422c461a9a447b8c67c5642f6bf0fd.svg" alt="" srcset="">
+      </div>
+    </div>
+  
+  </div>
+</div> 
+
+<footer class="bg-black text-white py-12 px-8 mx-60">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+      <!-- Logo and description -->
+      <div class="col-span-1">
+        <h2 class="text-2xl font-bold mb-2">intract.</h2>
+        <p class="text-gray-400 text-sm">We are your personal guide for exploring web3 projects & earning 100x rewards</p>
+      </div>
+
+      <!-- Navigation columns -->
+      <div>
+        <h3 class="font-bold mb-4 text-sm">INTRACT</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="text-gray-400 hover:text-white">Explore Quests</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Communities</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Alpha Hub</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-4 text-sm">EARN</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="text-gray-400 hover:text-white">Refer & Earn</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Leaderboard</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Achievements</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-4 text-sm">ABOUT</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="text-gray-400 hover:text-white">Product Roadmap</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Affiliate Program</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Sign up Program</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Growth Community</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-4 text-sm">SUPPORT</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Create your quest</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Community Guidelines</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="text-gray-400 text-xs mb-8 max-w-4xl">
+      <p>Disclaimer: Crypto Products, Virtual Digital Assets, and NFTs are unregulated and can be highly risky. There may be no regulatory recourse for any loss from such transactions. We advise the viewer to proceed with caution. Nothing in this website or any communication published by us amounts to, is intended to be, or should be construed as investment or purchase advice of any kind or financial advice or promotion under any applicable laws. Any decision made based on the content provided on this website or any communication published by us shall not be attributable to us.</p>
+    </div>
+
+    <!-- Bottom row -->
+    <div class="flex justify-between items-center">
+      <p class="text-sm">CREATED BY INTRACT</p>
+      <div class="flex space-x-4">
+        <a href="#" class="text-gray-400 hover:text-white">
+          <span class="material-icons">twitter</span>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <span class="material-icons">discord</span>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <span class="material-icons">facebook</span>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <span class="material-icons">music_note</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Fixed chat button -->
+<button class="fixed bottom-4 right-4 bg-blue-600 text-white rounded-full p-3 shadow-lg">
+  <span class="material-icons">chat</span>
+</button>
